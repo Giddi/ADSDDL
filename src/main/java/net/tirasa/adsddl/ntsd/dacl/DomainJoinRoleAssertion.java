@@ -21,14 +21,14 @@
  */
 package net.tirasa.adsddl.ntsd.dacl;
 
-import java.util.Arrays;
-import java.util.List;
-
 import net.tirasa.adsddl.ntsd.SID;
 import net.tirasa.adsddl.ntsd.data.AceFlag;
 import net.tirasa.adsddl.ntsd.data.AceObjectFlags;
 import net.tirasa.adsddl.ntsd.data.AceObjectFlags.Flag;
 import net.tirasa.adsddl.ntsd.data.AceRights;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Represents an {@linkplain AdRoleAssertion} which specifies the criteria required to join or remove computers
@@ -65,20 +65,10 @@ public class DomainJoinRoleAssertion extends AdRoleAssertion {
             AceFlag.INHERIT_ONLY_ACE);
 
     protected static final AceAssertion LIST_CONTENTS = new AceAssertion(
-            AceRights.parseValue(0x00000004),
-            null,
-            null,
-            null,
-            AceFlag.CONTAINER_INHERIT_ACE,
-            AceFlag.INHERIT_ONLY_ACE);
+            AceRights.parseValue(0x00000004));
 
     protected static final AceAssertion READ_PROPERTIES = new AceAssertion(
-            AceRights.parseValue(0x00000010),
-            null,
-            null,
-            null,
-            AceFlag.CONTAINER_INHERIT_ACE,
-            AceFlag.INHERIT_ONLY_ACE);
+            AceRights.parseValue(0x00000010));
 
     protected static final AceAssertion WRITE_PROPERTIES = new AceAssertion(
             AceRights.parseValue(0x00000020),
@@ -89,12 +79,7 @@ public class DomainJoinRoleAssertion extends AdRoleAssertion {
             null);
 
     protected static final AceAssertion READ_PERMISSIONS = new AceAssertion(
-            AceRights.parseValue(0x00020000),
-            null,
-            null,
-            null,
-            AceFlag.CONTAINER_INHERIT_ACE,
-            AceFlag.INHERIT_ONLY_ACE);
+            AceRights.parseValue(0x00020000));
 
     protected static final AceAssertion RESET_PASSWORD = new AceAssertion(
             AceRights.parseValue(AceRights.ObjectRight.CR.getValue()),
