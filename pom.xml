@@ -27,8 +27,9 @@
   </parent>
 
   <groupId>net.tirasa</groupId>
-  <artifactId>adsddl</artifactId>
-  <version>1.10-SNAPSHOT</version>
+  <!--Built on top of adsddl 1.10-SNAPSHOT-->
+  <artifactId>adsddl-vmw</artifactId>
+  <version>1.10.0.1</version>
 
   <name>ADSDDL</name>
   <url>https://github.com/Tirasa/ADSDDL</url>
